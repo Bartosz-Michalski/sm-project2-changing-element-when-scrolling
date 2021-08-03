@@ -16,19 +16,19 @@ document.body.appendChild(div);
 const changeHeight = function () {
   if (size <= 0) {
     grow = true;
+    div.style.backgroundColor = "green";
   } else if (size >= window.innerHeight / 2) {
     grow = false;
+    div.style.backgroundColor = "red";
   }
 
   if (grow) {
     size += 5;
-    div.style.height = size + "px";
-    div.style.backgroundColor = "green";
   } else {
     size -= 5;
-    div.style.height = size + "px";
-    div.style.backgroundColor = "red";
   }
+
+  div.style.height = size + "px";
 };
 
 window.addEventListener("scroll", changeHeight);
