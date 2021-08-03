@@ -11,3 +11,5 @@ div.style.heigh = size + "px";
 div.style.backgroundColor = "green";
 
 document.body.appendChild(div);
+
+window.addEventListener("scroll", changeHeight);
